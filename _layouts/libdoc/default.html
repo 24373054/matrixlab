@@ -25,14 +25,21 @@
                     </ul>
                 {% endif %}
             </nav>
+            <div class="u-ta-center u-mt-md u-pt-md u-bt-thin-solid u-c-primary-alt" style="opacity: 0.8;">
+                <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802046489" rel="noreferrer" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+                    <img src="{{ '/assets/beian-icon.png' | relative_url }}" alt="备案图标" style="width: 20px; height: 20px; margin-right: 5px;">
+                    <span style="font-size: 12px;">京公网安备11010802046489号</span>
+                </a>
+            </div>
         </footer>
-        <script type="text/javascript" src="{{ '/assets/libdoc/js/prism/prism-core.min.js' | relative_url }}"></script>
+        <script type="text/javascript" src="{{ '/assets/libdoc/js/prism/prism-core.min.js' | relative_url }}" defer></script>
         {% for language in site.prism.languages %}
-            <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/libdoc/js/prism/prism-{{ language }}.min.js"></script>
+            <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/libdoc/js/prism/prism-{{ language }}.min.js" defer></script>
         {% endfor %}
-        <script type="text/javascript" src="{{ '/assets/libdoc/js/my-toggles.js' | relative_url }}"></script>
-        <script type="text/javascript" src="{{ '/assets/libdoc/js/template.js' | relative_url }}"></script>
-        <script type="text/javascript" src="{{ '/assets/libdoc/js/playground.js' | relative_url }}"></script>
+        <script type="text/javascript" src="{{ '/assets/libdoc/js/my-toggles.js' | relative_url }}" defer></script>
+        <script type="text/javascript" src="{{ '/assets/libdoc/js/template.js' | relative_url }}" defer></script>
+        <script type="text/javascript" src="{{ '/assets/libdoc/js/playground.js' | relative_url }}" defer></script>
+        <script type="text/javascript" src="{{ '/assets/libdoc/js/page-switcher.js' | relative_url }}" defer></script>
 
         <aside my-toggle-name="libdoc-modal" class="c-position m-fixed m-top-left u-w-100 u-h-100 u-z-100">
             <div class="c-grid m-center m-middle m-position m-fixed m-top-left u-w-100 u-h-100">

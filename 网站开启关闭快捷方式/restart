@@ -1,0 +1,40 @@
+#!/bin/bash
+# Matrix Lab 网站重启脚本
+
+SERVICE_NAME="nginx"
+LOG_FILE="/var/log/matrixlab-website-control.log"
+
+# 确保日志文件存在且可写
+sudo touch $LOG_FILE
+sudo chmod 644 $LOG_FILE
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+echo "  🔄 正在重启 Matrix Lab 网站服务..." | tee -a $LOG_FILE
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+echo "重启时间: $(date)" | tee -a $LOG_FILE
+echo "" | tee -a $LOG_FILE
+
+echo "正在重启 Nginx 服务..." | tee -a $LOG_FILE
+sudo systemctl restart $SERVICE_NAME >> $LOG_FILE 2>&1
+
+# 等待服务启动
+sleep 2
+
+# 检查状态
+if systemctl is-active --quiet $SERVICE_NAME; then
+    echo "✅ Nginx 服务重启成功！" | tee -a $LOG_FILE
+    echo "" | tee -a $LOG_FILE
+    echo "网站地址: https://matrixlab.work" | tee -a $LOG_FILE
+    echo "" | tee -a $LOG_FILE
+else
+    echo "❌ Nginx 服务重启失败！" | tee -a $LOG_FILE
+    echo "" | tee -a $LOG_FILE
+    echo "请检查日志获取更多信息：" | tee -a $LOG_FILE
+    echo "  sudo journalctl -u nginx --since \"5 minutes ago\"" | tee -a $LOG_FILE
+    echo "" | tee -a $LOG_FILE
+fi
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+echo "操作完成。" | tee -a $LOG_FILE
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+

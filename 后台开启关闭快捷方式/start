@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# ========================================
+# Matrix Lab - 启动管理后台
+# ========================================
+
+echo "========================================="
+echo "  启动 Matrix Lab 管理员后台服务"
+echo "========================================="
+echo ""
+
+# 检查服务状态
+if systemctl is-active --quiet matrixlab-admin; then
+    echo "⚠️  管理后台已经在运行中！"
+    echo ""
+    systemctl status matrixlab-admin --no-pager -l
+    exit 0
+fi
+
+# 启动服务
+echo "🚀 正在启动管理后台服务..."
+sudo systemctl start matrixlab-admin
+
+# 等待服务启动
+sleep 2
+
+# 检查启动状态
+if systemctl is-active --quiet matrixlab-admin; then
+    echo ""
+    echo "✅ 管理后台启动成功！"
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  📊 服务信息"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  管理面板: https://matrixlab.work/admin-panel.html"
+    echo "  API 状态: https://matrixlab.work/api/health"
+    echo ""
+    echo "  查看日志: sudo journalctl -u matrixlab-admin -f"
+    echo "  停止服务: ./stop"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
+else
+    echo ""
+    echo "❌ 管理后台启动失败！"
+    echo ""
+    echo "查看错误日志:"
+    sudo journalctl -u matrixlab-admin -n 50 --no-pager
+fi
+

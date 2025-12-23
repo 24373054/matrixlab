@@ -1,0 +1,58 @@
+#!/bin/bash
+# Matrix Lab 网站一键启动脚本
+
+SERVICE_NAME="nginx"
+LOG_FILE="/var/log/matrixlab-website-control.log"
+
+# 确保日志文件存在且可写
+sudo touch $LOG_FILE
+sudo chmod 644 $LOG_FILE
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+echo "  🚀 正在启动 Matrix Lab 网站服务..." | tee -a $LOG_FILE
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+echo "启动时间: $(date)" | tee -a $LOG_FILE
+echo "" | tee -a $LOG_FILE
+
+# 检查服务状态
+if systemctl is-active --quiet $SERVICE_NAME; then
+    echo "⚠️  Nginx 服务已经在运行。" | tee -a $LOG_FILE
+    echo "" | tee -a $LOG_FILE
+    echo "网站地址: https://matrixlab.work" | tee -a $LOG_FILE
+    echo "" | tee -a $LOG_FILE
+else
+    echo "尝试启动 Nginx 服务..." | tee -a $LOG_FILE
+    sudo systemctl start $SERVICE_NAME >> $LOG_FILE 2>&1
+    
+    # 等待服务启动
+    sleep 2
+    
+    # 再次检查状态
+    if systemctl is-active --quiet $SERVICE_NAME; then
+        echo "✅ Nginx 服务启动成功！" | tee -a $LOG_FILE
+        echo "" | tee -a $LOG_FILE
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+        echo "  🌐 网站信息" | tee -a $LOG_FILE
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+        echo "  主页: https://matrixlab.work" | tee -a $LOG_FILE
+        echo "  Publications: https://matrixlab.work/publications.html" | tee -a $LOG_FILE
+        echo "  People: https://matrixlab.work/people.html" | tee -a $LOG_FILE
+        echo "" | tee -a $LOG_FILE
+        echo "  查看访问日志: sudo tail -f /var/log/nginx/matrixlab_access.log" | tee -a $LOG_FILE
+        echo "  查看错误日志: sudo tail -f /var/log/nginx/matrixlab_error.log" | tee -a $LOG_FILE
+        echo "  停止服务: ./stop" | tee -a $LOG_FILE
+        echo "" | tee -a $LOG_FILE
+    else
+        echo "❌ Nginx 服务启动失败！" | tee -a $LOG_FILE
+        echo "" | tee -a $LOG_FILE
+        echo "请检查日志获取更多信息：" | tee -a $LOG_FILE
+        echo "  sudo journalctl -u nginx --since \"5 minutes ago\"" | tee -a $LOG_FILE
+        echo "  或查看 /var/log/nginx/error.log" | tee -a $LOG_FILE
+        echo "" | tee -a $LOG_FILE
+    fi
+fi
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+echo "操作完成。" | tee -a $LOG_FILE
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a $LOG_FILE
+

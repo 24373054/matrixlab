@@ -1,0 +1,21 @@
+[Unit]
+Description=Matrix Lab Admin Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/yz/网站/Matrix_Lab1.0
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/python3 /home/ubuntu/yz/网站/Matrix_Lab1.0/admin-server.py
+Restart=always
+RestartSec=10
+
+# 日志配置
+StandardOutput=append:/var/log/matrixlab-admin.log
+StandardError=append:/var/log/matrixlab-admin-error.log
+
+[Install]
+WantedBy=multi-user.target
+

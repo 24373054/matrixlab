@@ -4,9 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if site.metadata.cache == false %}
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
+    <!-- 缓存已启用以提升性能 -->
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0"> -->
     {% endif %}
 
     <!-- LibDoc metadata -->
@@ -113,6 +114,22 @@
     <meta name="color-scheme" content="light">
     <meta name="mobile-web-app-capable" content="yes">
     
+    <!-- Preload critical resources for faster loading -->
+    <link rel="preload" href="{{ '/assets/libdoc/css/libdoc.css' | relative_url }}" as="style">
+    <link rel="preload" href="{{ '/assets/libdoc/fonts/RedHatDisplay-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/libdoc/fonts/RedHatDisplay-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+
+    <!-- Service Worker registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed'));
+            });
+        }
+    </script>
+
     <!-- Style sheets -->
     <link rel="stylesheet" href="{{ '/assets/libdoc/css/normalize.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/libdoc/fonts/icomoon/style.css' | relative_url }}">

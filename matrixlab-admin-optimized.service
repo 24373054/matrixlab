@@ -1,0 +1,32 @@
+[Unit]
+Description=Matrix Lab Admin Server (Gunicorn - Optimized)
+After=network.target
+
+[Service]
+Type=notify
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/yz/网站/Matrix_Lab1.0
+Environment="PATH=/home/ubuntu/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+
+# 使用 Gunicorn 启动（性能优化）
+ExecStart=/home/ubuntu/.local/bin/gunicorn \
+    --config /home/ubuntu/yz/网站/Matrix_Lab1.0/gunicorn_config.py \
+    app:app
+
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=5
+PrivateTmp=true
+
+Restart=always
+RestartSec=10
+
+# 性能和安全限制
+LimitNOFILE=65535
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target
+

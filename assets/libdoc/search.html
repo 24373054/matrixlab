@@ -19,6 +19,15 @@ unlisted: true
             {% endif %}
         {% endfor %}
     };
+
+    // Add People page content manually since it's in a layout file
+    window.store["people"] = {
+        "title": "People",
+        "author": "",
+        "category": "Navigation",
+        "content": "Faculty Qiang Zhang Professor Research Interests Blockchain Technology Federated Learning Intelligent Edge Computing Email qzhang@example.edu.cn Office Room 301 Computer Science Building Wei Li Associate Professor Research Interests Web 3.0 Ecosystem Smart Contract Security Email wli@example.edu.cn Office Room 305 Computer Science Building Fang Wang Assistant Professor Research Interests IoT Applications Consensus Mechanisms Email fwang@example.edu.cn Office Room 308 Computer Science Building Students PhD Students Ming Chen Research on Cross-chain Transaction Correlation in Blockchain Yang Liu Application of Federated Learning in Edge Computing Xue Zhao Security Mechanisms for Web 3.0 Ecosystem Master's Students Lei Sun Smart Contract Vulnerability Detection Ting Zhou IoT Blockchain Consensus Mechanisms Hao Wu Federated Graph Learning Algorithms Research Hua Zheng Blockchain Sharding Technology Optimization Undergraduate Students Feng Lin Blockchain Application Development Jing Huang Smart Contract Security Analysis Liang Xu Federated Learning System Implementation Alumni Class of 2024 Fan Yang PhD Currently at Alibaba DAMO Academy Lin Zhu Master's Currently at Tencent Research Institute Yong Qian Master's Currently at Huawei Central Research Institute Class of 2023 Xiang Gao PhD Currently at ByteDance AI Lab Jia He Master's Currently at Baidu Research Tao Song Master's Currently at Ant Group Class of 2022 Chao Peng PhD Currently Postdoctoral Researcher at Tsinghua University Li Ma Master's Currently at Microsoft Research Asia Jun Xie Master's Currently at JD Digits",
+        "url": "/people.html"
+    };
 </script>
 <script type="text/javascript" src="{{ 'assets/libdoc/js/lunr.min.js' | relative_url }}"></script>
 <script type="text/javascript" src="{{ 'assets/libdoc/js/search.js' | relative_url }}"></script>

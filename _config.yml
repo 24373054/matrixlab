@@ -3,12 +3,12 @@
 # More info at https://jekyllrb.com/docs/configuration/options/
 # ---------
 
-title: LibDoc # title of the documentation
+title: Matrix Lab # title of the documentation
 description: >- # Description of the docs. (>- means to ignore newlines until next param)
-  A Jekyll documentation theme with built-in search and playground
+  Matrix Lab - Research in Blockchain, Federated Learning, and Web 3.0 Ecosystems
 # IMPORTANT: on Github Pages deploys, url and baseurl must be commented or set to proper settings, otherwise links and resources URL are wrong
-# url: http://192.168.1.54 # the base hostname & protocol for your site, e.g. http://example.com
-# baseurl: /Jekyll-LibDoc/_site # the subpath of your site, e.g. /blog
+url: https://matrixlab.work # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 #permalink: /:path/:basename/:output_ext
 #destination: ../your/new/path # Build relative path destination. The destination directory e.g. /blog
 #keep_files: [cache]
@@ -114,7 +114,7 @@ metadata:
 
     # CACHE
     # Enable or not browser cache for the playground
-    cache: false
+    cache: true
 
     # PNG favicon file 
     # Path from root or absolute/remote URL - Square 32x32 pixels icon png format or .ico for old browsers
@@ -154,7 +154,7 @@ sidebar:
     logo:
         # LOGO URL
         # Image URL: Can be local e.g. '/img/logo.png' or remote 'https://remotesite.com/img/logo.png'
-        url: /assets/libdoc/img/favicon/android-chrome-512x512.png
+        url: /assets/logo.gif
 
         # LOGO MAX HEIGHT
         # Logo image max height, applies only if url is set
@@ -168,7 +168,7 @@ sidebar:
     # Allows to add links that are not pages included into the project
     # Display additional links anywhere into the sidebar
     additional_links:
-        -   url: https://github.com/olivier3lanc/Jekyll-LibDoc # Local or remote URL
+        -   url: https://github.com/24373054/matrixlab # Local or remote URL
             title: <span class="i-github u-mr-xxs"></span> View on GitHub # Link text
             order: 0 # Sets the rank of the page link into the sidebar, higher values give lower rank for the page link
             # category: Showcase # Add this this link into a category just like pages
@@ -177,28 +177,6 @@ sidebar:
         #     order: 100 # Sets the rank of the page link into the sidebar, higher values give lower rank for the page link
         #     iframe_mode: true
         #     category: Features
-        # Example URL
-        -   url: https://olivier3lanc.github.io/Scroll-Btween/
-            title: Scroll Btween
-            order: 500
-            category: Showcase
-        -   url: https://olivier3lanc.github.io/Scroll-Frames/
-            title: Scroll Frames
-            order: 500
-            category: Showcase
-        -   url: https://olivier3lanc.github.io/seemap/
-            title: SEEMAP
-            order: 500
-            category: Showcase
-        # Example remote URL
-        -   url: https://pages.github.com
-            title: Github Pages
-            order: 510
-            category: External resources
-        -   url: https://jekyllrb.com
-            title: Jekyll
-            order: 510
-            category: External resources
 
 # BADGES
 # Feature that allows to display badges into the footer https://shields.io image html and url

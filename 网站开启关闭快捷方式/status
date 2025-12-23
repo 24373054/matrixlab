@@ -1,0 +1,45 @@
+#!/bin/bash
+# Matrix Lab 网站状态查看脚本
+
+SERVICE_NAME="nginx"
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  📊 Matrix Lab 网站服务状态"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+
+# 检查服务状态
+if systemctl is-active --quiet $SERVICE_NAME; then
+    echo "✅ 状态: 运行中"
+    echo ""
+    echo "网站地址:"
+    echo "  主页: https://matrixlab.work"
+    echo "  Publications: https://matrixlab.work/publications.html"
+    echo "  People: https://matrixlab.work/people.html"
+    echo ""
+    
+    # 显示服务运行时间
+    echo "运行时间:"
+    systemctl show nginx --property=ActiveEnterTimestamp --value --no-pager
+    echo ""
+    
+    # 显示最近的访问
+    echo "最近访问 (最后5条):"
+    sudo tail -5 /var/log/nginx/matrixlab_access.log 2>/dev/null || echo "  无访问记录"
+    echo ""
+else
+    echo "❌ 状态: 已停止"
+    echo ""
+    echo "要启动网站，请运行: ./start"
+    echo ""
+fi
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  🛠️  可用命令"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  ./start   - 启动网站"
+echo "  ./stop    - 停止网站"
+echo "  ./restart - 重启网站"
+echo "  ./status  - 查看状态"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
