@@ -11,3 +11,11 @@
 /_config-ip.yml
 /.jekyll-cache
 .jekyll-metadata
+jekyll.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
