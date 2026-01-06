@@ -1,0 +1,16 @@
+/* TEAM */
+Lab: Matrix Lab
+Site: https://matrixlab.work
+Location: China
+
+/* THANKS */
+Jekyll LibDoc Theme: https://github.com/olivier3lanc/Jekyll-LibDoc
+
+/* SITE */
+Last update: 2025/01/07
+Language: English / 中文
+Doctype: HTML5
+IDE: Visual Studio Code
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Jekyll, Liquid, Markdown
+Software: Jekyll 4.x

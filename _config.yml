@@ -5,7 +5,7 @@
 
 title: Matrix Lab # title of the documentation
 description: >- # Description of the docs. (>- means to ignore newlines until next param)
-  Matrix Lab - Research in Blockchain, Federated Learning, and Web 3.0 Ecosystems
+  Matrix Lab - Leading Research in Blockchain Technology, Federated Learning, Smart Contracts, and Web 3.0 Ecosystems. Advancing IoT, Edge Computing, and Decentralized Applications.
 # IMPORTANT: on Github Pages deploys, url and baseurl must be commented or set to proper settings, otherwise links and resources URL are wrong
 url: https://matrixlab.work # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -130,7 +130,7 @@ metadata:
     
     # AUTHOR NAME
     # Name of the author of the site/project, used into various places of the theme like footer. Default is empty
-    author: 
+    author: Matrix Lab Research Team 
 
     # THEME COLOR
     # Theme color metadata used in some browsers like Chrome that applies this color on browser address bar.

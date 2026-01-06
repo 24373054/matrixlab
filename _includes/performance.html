@@ -1,0 +1,38 @@
+<!-- Performance Optimization -->
+
+<!-- Preload critical resources -->
+<link rel="preload" href="{{ '/assets/libdoc/css/libdoc.css' | relative_url }}" as="style">
+<link rel="preload" href="{{ site.sidebar.logo.url | relative_url }}" as="image">
+
+<!-- DNS Prefetch for external resources -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+<!-- Resource Hints -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Lazy loading for images -->
+<script>
+  // Add loading="lazy" to all images
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img:not([loading])');
+    images.forEach(img => {
+      img.setAttribute('loading', 'lazy');
+    });
+  });
+</script>
+
+<!-- Service Worker Registration -->
+<script>
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful');
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+</script>

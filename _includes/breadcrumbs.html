@@ -1,0 +1,27 @@
+<!-- Breadcrumb Navigation with Schema.org markup -->
+{% if page.url != '/' and page.url != '/index.html' %}
+<nav aria-label="Breadcrumb" style="padding: 10px 0; font-size: 14px;">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: inline;">
+      <a itemprop="item" href="{{ '/' | relative_url }}" style="color: #123456; text-decoration: none;">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+      <span style="margin: 0 8px; color: #999;">›</span>
+    </li>
+    
+    {% if page.category %}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: inline;">
+      <span itemprop="name" style="color: #666;">{{ page.category }}</span>
+      <meta itemprop="position" content="2" />
+      <span style="margin: 0 8px; color: #999;">›</span>
+    </li>
+    {% endif %}
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="display: inline;">
+      <span itemprop="name" style="color: #333; font-weight: 500;">{{ page.title }}</span>
+      <meta itemprop="position" content="{% if page.category %}3{% else %}2{% endif %}" />
+    </li>
+  </ol>
+</nav>
+{% endif %}

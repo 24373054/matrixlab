@@ -1,0 +1,29 @@
+{
+  "name": "Matrix Lab - Blockchain & Federated Learning Research",
+  "short_name": "Matrix Lab",
+  "description": "Leading research in blockchain technology, federated learning, smart contracts, and Web 3.0 ecosystems",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#123456",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/libdoc/img/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/libdoc/img/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "research", "technology"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

@@ -1,0 +1,40 @@
+<!-- Google Analytics (Replace with your tracking ID) -->
+{% if jekyll.environment == 'production' %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Google Search Console -->
+<!-- Already verified via meta tag in seo.html -->
+
+<!-- Structured Data for Research Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.sidebar.logo.url | absolute_url }}",
+  "description": "{{ site.description }}",
+  "foundingDate": "2020",
+  "knowsAbout": [
+    "Blockchain Technology",
+    "Federated Learning",
+    "Web 3.0",
+    "Smart Contracts",
+    "Internet of Things",
+    "Edge Computing",
+    "Artificial Intelligence"
+  ],
+  "areaServed": "Worldwide",
+  "sameAs": [
+    "https://github.com/24373054/matrixlab"
+  ]
+}
+</script>
+{% endif %}

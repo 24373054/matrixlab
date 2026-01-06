@@ -1,0 +1,22 @@
+# Matrix Lab - Robots.txt
+# https://matrixlab.work
+
+User-agent: *
+Allow: /
+Disallow: /admin-panel.html
+Disallow: /_site/
+Disallow: /.jekyll-cache/
+Disallow: /assets/libdoc/ajax/
+
+# Sitemap location
+Sitemap: https://matrixlab.work/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
