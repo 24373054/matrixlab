@@ -172,6 +172,10 @@ sidebar:
             title: <span class="i-github u-mr-xxs"></span> View on GitHub # Link text
             order: 0 # Sets the rank of the page link into the sidebar, higher values give lower rank for the page link
             # category: Showcase # Add this this link into a category just like pages
+        -   url: https://develop.matrixlab.work # Ke Entropy Technology
+            title: <span class="i-building u-mr-xxs"></span> Ke Entropy Tech # Link text
+            order: 5 # Sets the rank of the page link into the sidebar
+            category: Ecosystem # Add this link into Ecosystem category
         # -   url: https://www.youtube.com/embed/iWowJBRMtpc # Local or remote URL
         #     title: Iframe mode example # Link text
         #     order: 100 # Sets the rank of the page link into the sidebar, higher values give lower rank for the page link

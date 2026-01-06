@@ -87,7 +87,23 @@ Applying artificial intelligence and large language models to blockchain securit
 
 - [📚 View All Publications](/publications.html) - Explore our complete research portfolio
 - [👥 Meet Our Team](/people.html) - Learn about our researchers and collaborators
+- [🌐 Platforms & Products](/platforms.html) - Discover our ecosystem
 - [💻 GitHub Repository](https://github.com/24373054/matrixlab) - Access our open-source projects
+
+## 🏢 Matrix Lab Ecosystem
+
+### Ke Entropy Technology (刻熵科技)
+
+Our commercial arm translating research into practical blockchain security solutions and Web3 products.
+
+**[Visit Ke Entropy →](https://develop.matrixlab.work)**
+
+**Featured Products**:
+- **[MatrixTrace](https://develop.matrixlab.work/zh/products/trace)** - Advanced blockchain analysis and fund tracking platform
+- **[Matrix Exchange](https://develop.matrixlab.work/zh/products/exchange)** - Decentralized trading platform with enhanced security
+- **[Yingzhou Chronicles](https://develop.matrixlab.work/zh/products/game)** - Web3 gaming with play-to-earn mechanics
+
+**[Explore All Platforms →](/platforms.html)**
 
 ## 🤝 Collaboration & Contact
 
