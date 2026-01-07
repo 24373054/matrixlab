@@ -1,0 +1,26 @@
+<!-- Favicon and App Icons -->
+
+<!-- Standard favicon -->
+<link rel="icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon/favicon.svg' | relative_url }}">
+
+<!-- PNG fallback for browsers that don't support SVG -->
+<link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/favicon/favicon-96x96.png' | relative_url }}">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+
+<!-- Microsoft Tiles -->
+<meta name="msapplication-TileColor" content="#123456">
+<meta name="msapplication-TileImage" content="{{ '/assets/favicon/web-app-manifest-512x512.png' | relative_url }}">
+<meta name="msapplication-config" content="{{ '/browserconfig.xml' | relative_url }}">
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#123456" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#123456" media="(prefers-color-scheme: dark)">
+
+<!-- Safari Pinned Tab -->
+<link rel="mask-icon" href="{{ '/assets/favicon/favicon.svg' | relative_url }}" color="#123456">
