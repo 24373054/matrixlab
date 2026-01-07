@@ -1,126 +1,330 @@
-> [!NOTE]  
-> This Jekyll Theme is still working fine but it is not maintained anymore. Jekyll LibDoc has become [Eleventy LibDoc](https://github.com/ita-design-system/eleventy-libdoc)
+# Matrix Lab
 
-# Jekyll LibDoc
+**Leading Research in Blockchain Technology, Federated Learning, and Web 3.0 Ecosystems**
 
-**A Jekyll documentation theme with built-in search and playground**
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmatrixlab.work)](https://matrixlab.work)
+[![GitHub](https://img.shields.io/github/stars/24373054/matrixlab?style=social)](https://github.com/24373054/matrixlab)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
-[Documentation](https://olivier3lanc.github.io/Jekyll-LibDoc/) | 
-[Installation](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-install.html) | 
-[Configuration](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-config.html)
+🌐 **Website**: [matrixlab.work](https://matrixlab.work)  
+🏢 **Commercial Arm**: [Ke Entropy Technology](https://develop.matrixlab.work)  
+💻 **GitHub**: [@24373054](https://github.com/24373054)
 
-LibDoc is a Jekyll theme that was crafted to easily and quickly get properly designed documentation especially for CSS and Javascript libraries. It comes with a [built-in playground](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-playground.html) and local search engine.
+---
 
-[![pages-build-deployment](https://github.com/olivier3lanc/Jekyll-LibDoc/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/olivier3lanc/Jekyll-LibDoc/actions/workflows/pages/pages-build-deployment) [![Jekyll Themes Shield](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com) 
+## 🔬 About Matrix Lab
 
-![LibDoc layout](https://github.com/olivier3lanc/Jekyll-LibDoc/raw/develop/assets/libdoc/img/libdoc-layout-page-split.webp)
+Matrix Lab is a cutting-edge research laboratory specializing in blockchain technology, federated learning, intelligent edge computing, and Web 3.0 ecosystems. We bridge academic research and practical applications, publishing in top-tier conferences while developing real-world solutions.
 
-## Showcase
+### Research Focus
 
-The following documentation projects use LibDoc:
+- **Blockchain Technology**: Consensus mechanisms, cross-chain transactions, smart contract security
+- **Federated Learning**: Multimodal federated learning, privacy-preserving ML, heterogeneous devices
+- **Web 3.0 Ecosystem**: Decentralized applications, incentive mechanisms, semantic analysis
+- **Intelligent Edge Computing**: Edge intelligence, AIoT applications, distributed computing
+- **AI & Machine Learning**: LLMs for smart contracts, vulnerability detection, recommendation systems
 
-* [SEEMAP](https://olivier3lanc.github.io/seemap/) A single HTML map file bundled with customizable popular Leaflet plugins, map providers and its own API.
-* [Scroll Frames](https://olivier3lanc.github.io/Scroll-Frames/) Animate sequences of still frames on any DOM element in relation with its position into the viewport.
-* [Scroll Btween](https://olivier3lanc.github.io/Scroll-Btween/) Tween any CSS values on any DOM element in relation with its position into the viewport.
-* [GOA UI Framework](https://itautomotive-dev.github.io/goafe-ui/) Documentation of custom GOA CAR website UI framework.
-* [BYmyCAR UI Framework](https://itautomotive-dev.github.io/bymycar-ui/) Documentation of custom BYmyCAR website UI framework.
+---
 
-## Features
+## 🏆 Recent Achievements (2025)
 
-* **Quick and easy without installation<sup>new</sup>**<br> Quickly deploy Jekyll LibDoc on a Github repository with [remote theme feature](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-install.html#online---remote-theme)
-* **Dual context: LibDoc + Playground**<br> LibDoc was made to craft documentation with its own embedded demos and examples. A major feature of the LibDoc Jekyll theme is its own built-in and configurable playground which is both a [layout](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-layouts.html#playground) and a syntax highlighter extension. It extends the [syntax highlighter](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-config.html#prismjs-syntax-highlighter) by running the specified code into a configurable context with user defined style sheets and scripts. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-playground.html)
-* **Gem free, plugin free** <br>LibDoc runs without any Gem nor plugin.
-* **Github Pages compatible Jekyll theme** <br>Easily deploy your project on Github Pages, LibDoc is fully compatible.
-* **5 layouts** <br>LibDoc comes with dedicated [layouts](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-layouts.html) for common documentation usages.
-* **Assets grid**<br> Built to allow visitors to view, download or copy URL of specified resources on your project. [Example](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-layout-assets.html)
-* **Local search engine**<br> LibDoc has its own internal search engine based on [lunr.js](https://lunrjs.com/).
-* **Multiple lazy-loaded playgrounds on any page** <br>Add as mush as playgrounds on your documentation pages, playgrounds are loaded once into the viewport.
-* **Can work locally, even without Internet connection** <br>LibDoc can run locally with Jekyll serve or any http host - *assuming you set up local resources.*
-* **Customizeable settings**<br> LibDoc has its own settings editable on needs in the configuration file [config.yml](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-config.html).
-* **Front matter**<br> Optional parameters ready to be set into the front matter of each page and every layout, like `category`, `order` in sidebar and `unlisted` feature. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-front-matter.html)
-* **Github Flavoured Markdown**<br> LibDoc comes with native support of [Github Flavoured Markdown](https://github.github.com/gfm/). [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-markdown.html)
-* **Metadata**<br> LibDoc supports social networks metadata into its document `<head>` to enable proper social sharing. Favicon, image, author, color, language are supported in addition of site title and description. Metadata have dual settings for both [site/project](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-config.html#metadata) and [playground](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-config.html#playground)
-* **Sidebar**<br> All the necessary UI components to navigate through your project. Customizeable features such as logo/text management, search engine and possibility to add links of page that are not contained into the project. All available pages of the project are listed into the responsive sidebar, excepting unlisted ones. You can also assign category to pages and set a custom order. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-config.html#sidebar)
-* **Customizable Logo**<br> The top left of the LibDoc’s theme is a homepage link that can display just site title or a custom logo. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-sidebar.html#sidebar)
-* **Pages order and category**<br> Pages created can optionally have a category and an order assigned through their front matter. Then, it is possible to group pages links in the sidebar with a tip above the link. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-front-matter.html)
-* **Unlisted pages**<br> It is possible to remove page link from the sidebar and search results thanks to the front matter `unlisted` property. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-front-matter.html#unlisted)
-* **Prims as syntax highlighter**<br> LibDoc uses customizeable [Prismjs](https://prismjs.com/) syntax highlighter for both playground and markdown code highlight. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-config.html#prismjs-syntax-highlighter)
-* **TOC - Table Of Content**<br> LibDoc supports `{:toc}` automatically generated from kramdown - markdown engine - TOC styling the table of content onto a right sidebar. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-markdown.html#table-of-content-support)
-* **Shields and badges**<br>![Badge example](https://shields.io/badge/style-for--the--badge-green?logo=appveyor&style=for-the-badge) <br>
-Easily add [shields.io](https://shields.io/) badges into the footer. Create your own badges and add it through the config.yml. [Learn more](https://olivier3lanc.github.io/Jekyll-LibDoc/libdoc-badges.html)
+### Top-Tier Publications
 
-## Usage
+- ✅ **IEEE Transactions on Information Forensics and Security** - "Connector: Enhancing the traceability of decentralized bridge applications"
+- ✅ **IEEE Internet of Things Journal** - "MMFed: A Multimodal Federated Learning Framework"
+- ✅ **IEEE INFOCOM 2025** - "ContribChain: A Stress-Balanced Blockchain Sharding Protocol"
+- ✅ **IEEE ICDE 2025** - "Know Your Account: Double Graph Inference-Based Account De-Anonymization"
+- ✅ **Science China Information Sciences** - "Agent4Vul: multimodal LLM agents for smart contract vulnerability detection"
+- ✅ **Neural Networks** - "Enhancing partition distinction: A contrastive policy to recommendation unlearning"
 
-It is possible to use LibDoc through different ways:
+[View All Publications →](https://matrixlab.work/publications.html)
 
-### Online - No installation as remote theme
+---
 
-*Available only on GitHub*, [remote theme feature](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme) is the most simple way to use LibDoc, it does not require any installation, just follow these few steps:
+## 🌐 Matrix Lab Ecosystem
 
-1. **Create a repository** <br>Just add a new repository on your GitHub account. [Example](https://github.com/olivier3lanc/LibDoc-remote-demo/)
-2. **Create a LibDoc config file** <br>Create and configure your LibDoc config file called [_config.yml](libdoc-config.html), required for GitHub Pages, do not forget to add/uncomment the following line:<br>`remote_theme: olivier3lanc/Jekyll-LibDoc`<br>[View a _config.yml example](https://github.com/olivier3lanc/LibDoc-remote-demo/blob/main/_config.yml)
-3. **Enable Github Pages** <br>To automatically compile your LibDoc project, just enable GitHub Pages at `https://github.com/[GH_USER_NAME]/[REPO_NAME]/settings/pages`. Each time you commit and push on the specified branch, [Github Pages](https://pages.github.com) builds and hosts your project on the URL `https://[GH_USER_NAME].github.io/[REPO_NAME]`.
+### Research Lab (This Site)
+**URL**: [matrixlab.work](https://matrixlab.work)
 
-Your repository is now ready to be deployed as GitHub Pages website, all you have to do is adding your content! Learn more about [remote themes](https://github.blog/2017-11-29-use-any-theme-with-github-pages/)
+Academic research, publications, and team information.
 
+### Ke Entropy Technology (刻熵科技)
+**URL**: [develop.matrixlab.work](https://develop.matrixlab.work)
 
-### Online - No installation copy or clone
+Our commercial arm translating research into practical solutions:
 
-![Github.dev](https://github.com/olivier3lanc/Jekyll-LibDoc/raw/develop/assets/libdoc/img/libdoc-edit-online.webp)
+- **[MatrixTrace](https://develop.matrixlab.work/zh/products/trace)** - Blockchain analysis and fund tracking platform
+- **[Matrix Exchange](https://develop.matrixlab.work/zh/products/exchange)** - Decentralized trading platform
+- **[Yingzhou Chronicles](https://develop.matrixlab.work/zh/products/game)** - Web3 gaming platform
 
-It is possible to craft documentation with LibDoc only with your browser, [Github](https://www.github.com) and [Github Pages](https://pages.github.com). 
+[Explore Ecosystem →](https://matrixlab.work/platforms.html)
 
-1. Copy, clone or fork [LibDoc repository](https://github.com/olivier3lanc/Jekyll-LibDoc)
-2. On the forked/copy repository, press `Shift + .` or go to `https://github.dev/[GH_USER_NAME]/[REPO_NAME]/tree/[BRANCH_NAME]`
-3. You are now into [Visual Studio Code](https://code.visualstudio.com/) and you can edit, commit and push.
+---
 
-To automatically compile your LibDoc project, just enable your instance on this page `https://github.com/[GH_USER_NAME]/[REPO_NAME]/settings/pages`. Each time you commit and push on the specified branch, [Github Pages](https://pages.github.com) builds and hosts your project on the URL `https://[GH_USER_NAME].github.io/[REPO_NAME]`.
+## 🚀 Quick Start
 
-### Local install
+### Prerequisites
 
-LibDoc requires only [Jekyll](https://jekyllrb.com/) to compile your work.
+- Ruby 2.7+
+- Jekyll 4.0+
+- Git
 
-1. Install Jekyll on your machine following the steps described [here](https://jekyllrb.com/docs/)
-2. Get the latest version of LibDoc 
-    * [Download blank](https://github.com/olivier3lanc/Jekyll-LibDoc/archive/refs/heads/master.zip) or [Download with demo content](https://github.com/olivier3lanc/Jekyll-LibDoc/archive/refs/heads/develop.zip)
-    * You can also clone repository from your terminal `git clone git@github.com:olivier3lanc/Jekyll-LibDoc.git`
-3. Into the folder where LibDoc was copied, adjust your settings of your YAML file, Most important are
-    * `url` <br>The host of your local set up, this can be for example *http://localhost* or *http://192.168.1.2* or domaine name
-    * `baseurl` <br>The path to your local copy of LibDoc. For example */Jekyll-LibDoc/_site*
-    * `title` <br>Title of the documentation
-    * `description` <br>Description of your documentation project
-4. Compile your project using:
-    * `jekyll build`<br> Builds the project using *_config.yml*
-    * `jekyll build -c _personal-config.yml` <br> Builds the project using *_personal-config.yml*
-    * `jekyll build -c _personal-config.yml --watch` <br> Builds the project using *_personal-config.yml* and automatically compiles on detected changes.
-    * Learn more about command line usage on [official Jekyll documentation](https://jekyllrb.com/docs/usage/)
+### Local Development
 
-### Local with remote theme
+```bash
+# Clone the repository
+git clone https://github.com/24373054/matrixlab.git
+cd matrixlab
 
-[View example repository](https://github.com/olivier3lanc/LibDoc-remote-demo/tree/local)
+# Build the site
+jekyll build
 
-It is possible to only write your content without complete LibDoc installation, just use LibDoc as remote theme. You only need to use locally [Jekyll remote theme plugin](https://github.com/benbalter/jekyll-remote-theme)
+# Serve locally
+jekyll serve
 
-1. Install Jekyll on your machine following the steps described [here](https://jekyllrb.com/docs/)
-2. Add a Gemfile with the following line
+# Visit http://localhost:4000
+```
 
-  ```ruby
-  gem "jekyll-remote-theme"
-  ```
-  and run `bundle install` to install the plugin
+### Deployment
 
-3. Add the following to your LibDoc's local config file `_config-local.yml`
+```bash
+# Build for production
+jekyll build
 
-  ```yml
-  remote_theme: olivier3lanc/Jekyll-LibDoc
-  plugins:
-    - jekyll-remote-theme
-  ```
+# Deploy (automatic via GitHub Pages)
+git push origin main
+```
 
-4. Run `jekyll build` or with any custom config file `jekyll build -c _your-own-config.yml`
+---
 
-Feel free to use the [example repository](https://github.com/olivier3lanc/LibDoc-remote-demo/tree/local) as starter template.
+## 📁 Project Structure
 
-## Contributing
+```
+matrixlab/
+├── _config.yml              # Jekyll configuration
+├── _includes/               # Reusable components
+│   ├── seo.html            # SEO meta tags
+│   ├── analytics.html      # Google Analytics
+│   ├── performance.html    # Performance optimization
+│   └── favicon.html        # Favicon configuration
+├── _layouts/               # Page layouts
+├── _data/                  # Data files
+│   └── publications.yml    # Publications data
+├── assets/                 # Static assets
+│   ├── favicon/           # Favicon files
+│   └── images/            # Images
+├── home.md                 # Homepage
+├── publications.md         # Publications page
+├── people.md              # Team page
+├── platforms.md           # Ecosystem page
+├── sitemap.xml            # SEO sitemap
+├── robots.txt             # Search engine directives
+├── manifest.json          # PWA manifest
+└── README.md              # This file
+```
 
-Feel free to contribute to LibDoc development, fork this project, make changes on develop branch and send pull requests or simply report issues.
+---
+
+## 🎨 Features
+
+### Professional SEO
+- ✅ Complete meta tags (Open Graph, Twitter Cards)
+- ✅ Structured data (Schema.org)
+- ✅ XML sitemap and RSS feed
+- ✅ Google Search Console verified
+- ✅ Performance optimized
+
+### Modern Design
+- ✅ Responsive layout
+- ✅ Dark/Light mode support
+- ✅ Fast loading times
+- ✅ Mobile-friendly
+
+### Developer Friendly
+- ✅ Jekyll-based (static site generator)
+- ✅ Easy to customize
+- ✅ Well-documented
+- ✅ Git-based workflow
+
+---
+
+## 📊 SEO & Analytics
+
+### SEO Optimization
+
+This site includes professional-grade SEO:
+
+- **Technical SEO**: Sitemap, robots.txt, canonical URLs
+- **Meta Tags**: Complete Open Graph and Twitter Cards
+- **Structured Data**: Organization, WebSite, WebPage schemas
+- **Performance**: Optimized loading, caching, compression
+- **Security**: HTTPS, security headers, CSP
+
+See [SEO Documentation](SEO_README.md) for details.
+
+### Analytics
+
+- Google Analytics (GA4)
+- Google Search Console
+- Performance monitoring
+
+---
+
+## 🛠️ Maintenance
+
+### Update Content
+
+```bash
+# Edit markdown files
+vim home.md
+
+# Rebuild
+jekyll build
+
+# Commit and push
+git add .
+git commit -m "Update content"
+git push
+```
+
+### Update Publications
+
+Edit `_data/publications.yml`:
+
+```yaml
+- title: "Your Paper Title"
+  authors: "Author Names"
+  journal: "Journal Name"
+  year: 2025
+  url: "https://paper-url.com"
+```
+
+### SEO Audit
+
+```bash
+# Run SEO audit
+./seo_audit.sh
+
+# Build and deploy
+./build_and_deploy.sh
+```
+
+---
+
+## 📚 Documentation
+
+- **[SEO Guide](SEO_README.md)** - Complete SEO documentation
+- **[Quick Start](QUICK_SEO_GUIDE.md)** - 5-minute setup guide
+- **[Checklist](SEO_CHECKLIST.md)** - SEO optimization checklist
+- **[Subsite Integration](SUBSITE_INTEGRATION.md)** - Ecosystem integration
+- **[Favicon Guide](FAVICON_GUIDE.md)** - Favicon setup and testing
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community!
+
+### For Researchers
+- Collaborate on research projects
+- Co-author papers
+- Access datasets
+
+### For Developers
+- Contribute to open-source projects
+- Report bugs and issues
+- Suggest improvements
+
+### For Students
+- Internship opportunities
+- Research assistant positions
+- Thesis collaboration
+
+**Contact**: Visit [matrixlab.work/people.html](https://matrixlab.work/people.html)
+
+---
+
+## 👥 Team
+
+Matrix Lab is composed of researchers, engineers, and students from leading universities and institutions.
+
+- **Faculty**: Experienced researchers in blockchain and AI
+- **PhD Students**: Cutting-edge research in Web3 and ML
+- **Engineers**: Building practical solutions
+- **Collaborators**: International research partners
+
+[Meet the Team →](https://matrixlab.work/people.html)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+
+### Third-Party Licenses
+
+- **Jekyll LibDoc Theme**: [Original Repository](https://github.com/olivier3lanc/Jekyll-LibDoc)
+- **Jekyll**: [MIT License](https://github.com/jekyll/jekyll/blob/master/LICENSE)
+
+---
+
+## 🔗 Links
+
+### Official Sites
+- **Research Lab**: [matrixlab.work](https://matrixlab.work)
+- **Ke Entropy Tech**: [develop.matrixlab.work](https://develop.matrixlab.work)
+- **Exchange Platform**: [exchange.matrixlab.work](https://exchange.matrixlab.work)
+- **Gaming Platform**: [immortal.matrixlab.work](https://immortal.matrixlab.work)
+
+### Social & Development
+- **GitHub**: [@24373054](https://github.com/24373054)
+- **Founder**: [24373054.github.io](https://24373054.github.io/)
+
+### Resources
+- **Publications**: [matrixlab.work/publications.html](https://matrixlab.work/publications.html)
+- **Blog**: [develop.matrixlab.work/zh/blog](https://develop.matrixlab.work/zh/blog)
+- **Documentation**: [develop.matrixlab.work/zh/developers](https://develop.matrixlab.work/zh/developers)
+
+---
+
+## 📞 Contact
+
+### General Inquiries
+- Website: [matrixlab.work](https://matrixlab.work)
+- Email: Contact via website
+
+### Research Collaboration
+- Publications: [matrixlab.work/publications.html](https://matrixlab.work/publications.html)
+- Team: [matrixlab.work/people.html](https://matrixlab.work/people.html)
+
+### Business & Products
+- Ke Entropy Technology: [develop.matrixlab.work](https://develop.matrixlab.work)
+- Contact: [develop.matrixlab.work/zh/contact](https://develop.matrixlab.work/zh/contact)
+
+---
+
+## 🌟 Acknowledgments
+
+- **Jekyll LibDoc**: Original theme by [Olivier 3lanc](https://github.com/olivier3lanc)
+- **Research Partners**: Collaborating universities and institutions
+- **Open Source Community**: Contributors and supporters
+
+---
+
+## 📈 Statistics
+
+- **10+** Published papers in top-tier venues
+- **5+** Commercial products launched
+- **20+** Team members and collaborators
+- **100K+** Transactions analyzed daily
+- **50+** Smart contracts audited
+
+---
+
+**© 2024-2025 Matrix Lab. All rights reserved.**
+
+Built with ❤️ using [Jekyll](https://jekyllrb.com/) and [LibDoc Theme](https://github.com/olivier3lanc/Jekyll-LibDoc)
+
+---
+
+**Keywords**: Blockchain Research, Federated Learning, Web 3.0, Smart Contract Security, IoT, Edge Computing, Consensus Mechanisms, Cross-chain Technology, DeFi, AI Security, 区块链研究, 联邦学习, 智能合约
