@@ -165,15 +165,16 @@ layout: libdoc/default
 .tab-content h2 {
     margin-top: 0.5em !important;
     margin-bottom: 1.5em !important;
-    color: #123456;
-    border-bottom: 2px solid #123456;
+    color: var(--sg-color-primary, #323b44);
+    border-bottom: 2px solid var(--sg-color-primary-alt, #647688);
     padding-bottom: 0.5em;
 }
 
 /* Tab Buttons */
 .c-btn.m-tab {
-    background: #f5f5f5;
-    border: 1px solid #ddd;
+    background: var(--sg-color-primary-edge, #f4f5f7);
+    border: 1px solid var(--sg-color-primary-alt, #647688);
+    color: var(--sg-color-primary, #323b44);
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
@@ -181,13 +182,14 @@ layout: libdoc/default
 }
 
 .c-btn.m-tab:hover {
-    background: #e0e0e0;
+    background: var(--sg-color-primary-max, #fff);
+    border-color: var(--sg-color-hilight-alt, #036dde);
 }
 
 .c-btn.m-tab.active {
-    background: #123456;
-    color: white;
-    border-color: #123456;
+    background: var(--sg-color-hilight-alt, #036dde);
+    color: var(--sg-color-primary-max, #fff);
+    border-color: var(--sg-color-hilight-alt, #036dde);
 }
 
 /* People Grid */
@@ -197,20 +199,20 @@ layout: libdoc/default
     gap: 24px;
 }
 
-/* Person Card */
+/* Person Card - Light theme */
 .person-card {
     display: flex;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
+    background: var(--sg-color-primary-max, #fff);
+    border: 1px solid var(--sg-color-primary-alt, #647688);
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(50, 59, 68, 0.08);
     transition: all 0.3s ease;
 }
 
 .person-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(50, 59, 68, 0.15);
+    border-color: var(--sg-color-hilight-alt, #036dde);
 }
 
 /* Person Photo */
@@ -219,7 +221,7 @@ layout: libdoc/default
     width: 140px;
     height: 180px;
     overflow: hidden;
-    background: #f5f5f5;
+    background: var(--sg-color-primary-edge, #f4f5f7);
 }
 
 .person-photo img {
@@ -230,7 +232,7 @@ layout: libdoc/default
 }
 
 .person-card:hover .person-photo img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Person Info */
@@ -239,41 +241,42 @@ layout: libdoc/default
     padding: 16px;
     display: flex;
     flex-direction: column;
+    background: var(--sg-color-primary-max, #fff);
 }
 
 .person-info h3 {
     margin: 0 0 8px 0;
     font-size: 1.1em;
-    color: #333;
+    color: var(--sg-color-primary, #323b44);
 }
 
 .person-info p {
     margin: 4px 0;
     font-size: 0.9em;
-    color: #555;
+    color: var(--sg-color-primary-alt, #647688);
     line-height: 1.4;
 }
 
 .person-info .title {
-    color: #123456;
+    color: var(--sg-color-hilight-alt, #036dde);
     font-weight: 500;
 }
 
 .person-info .affiliation {
-    color: #666;
+    color: var(--sg-color-primary-alt, #647688);
     font-style: italic;
 }
 
 .person-info .research {
-    color: #444;
+    color: var(--sg-color-primary, #323b44);
 }
 
 .person-info .supervisor {
-    color: #666;
+    color: var(--sg-color-primary-alt, #647688);
 }
 
 .person-info .email a {
-    color: #007bff;
+    color: var(--sg-color-hilight-alt, #036dde);
     text-decoration: none;
 }
 
@@ -282,7 +285,7 @@ layout: libdoc/default
 }
 
 .person-info .homepage a {
-    color: #28a745;
+    color: var(--sg-color-hilight-edge, #9acd32);
     text-decoration: none;
 }
 
@@ -294,14 +297,14 @@ layout: libdoc/default
     margin-top: auto;
     padding-top: 8px;
     font-size: 0.85em;
-    color: #666;
-    border-top: 1px dashed #eee;
+    color: var(--sg-color-primary-alt, #647688);
+    border-top: 1px dashed var(--sg-color-primary-edge, #f4f5f7);
 }
 
 /* No Data */
 .no-data {
     text-align: center;
-    color: #999;
+    color: var(--sg-color-primary-alt, #647688);
     padding: 40px;
     font-style: italic;
 }
@@ -325,40 +328,6 @@ layout: libdoc/default
         padding: 6px 12px;
         font-size: 0.85em;
         margin-bottom: 8px;
-    }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .person-card {
-        background: #2a2a2a;
-        border-color: #444;
-    }
-    
-    .person-info h3 {
-        color: #fff;
-    }
-    
-    .person-info p {
-        color: #ccc;
-    }
-    
-    .person-info .introduction {
-        border-top-color: #444;
-    }
-    
-    .c-btn.m-tab {
-        background: #333;
-        border-color: #555;
-        color: #fff;
-    }
-    
-    .c-btn.m-tab:hover {
-        background: #444;
-    }
-    
-    .c-btn.m-tab.active {
-        background: #123456;
     }
 }
 </style>
