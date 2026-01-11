@@ -1,0 +1,145 @@
+# Matrix Lab Team Members
+
+# ==================
+# Faculty
+# ==================
+faculty:
+  - name: "Zhang Qinnan"
+    title: "Assistant Researcher"
+    affiliation: "School of Artificial Intelligence, Beihang University"
+    research: "Artificial Intelligence, Blockchain"
+    email: "zhangqn@buaa.edu.cn"
+    homepage: "https://scholar.google.com/citations?user=A91BgKwAAAAJ&hl=zh-CN"
+    photo: "张沁楠.jpg"
+    introduction: "Zhang Qinnan is an assistant researcher at the School of Artificial Intelligence, Beihang University, and a member of the Future Blockchain and Privacy Computing High-Precision Innovation Center."
+    order: 1
+
+# ==================
+# PhD Students
+# ==================
+phd_students:
+  - name: "Zhang Huan"
+    affiliation: "School of Artificial Intelligence, Beihang University"
+    research: "Artificial Intelligence, Multimodal Large Models"
+    email: "zhanghuan1@buaa.edu.cn"
+    supervisor: "Wu Faguo, Zhang Qinnan"
+    photo: "张桓.jpg"
+    introduction: "A Ph.D. candidate at Beihang University, primarily interested in the mechanisms of hallucination generation and propagation in multimodal large models. Current research focuses on hallucination suppression and joint modeling in distributed multimodal large models."
+    order: 1
+
+  - name: "Wen Xin"
+    affiliation: "Beihang University"
+    research: "Blockchain"
+    email: "21373175@buaa.edu.cn"
+    supervisor: "Zheng Zhiming"
+    photo: "温昕.gif"
+    introduction: "Direct-entry Ph.D. candidate of the 2025 cohort"
+    order: 2
+
+# ==================
+# Master Students
+# ==================
+master_students:
+  - name: "Liu Siyu"
+    affiliation: "School of Artificial Intelligence, Beihang University"
+    research: "Ubiquitous Trustworthy Intelligence"
+    email: "18644900007@163.com"
+    supervisor: "Zheng Zhiming"
+    photo: "刘思妤.jpeg"
+    introduction: "Master's student in Artificial Intelligence"
+    order: 1
+
+  - name: "Yang Yi"
+    affiliation: "School of Artificial Intelligence, Beihang University"
+    research: "Natural Language Processing"
+    email: "allblacky@163.com"
+    supervisor: "Professor Wu Faguo"
+    photo: "杨亿.jpeg"
+    introduction: "Currently pursuing a Master's degree at the School of Artificial Intelligence, Beihang University, dedicated to contributing to the field with passion and collaborative spirit."
+    order: 2
+
+  - name: "Yang Haofu"
+    affiliation: "School of Artificial Intelligence, Beihang University"
+    research: "Natural Language Processing"
+    email: "Yang2003@buaa.edu.cn"
+    photo: "杨浩甫.jpg"
+    introduction: "Emancipate the mind, seek truth from facts, and continue to strive forward."
+    order: 3
+
+  - name: "Yuhua Wang"
+    affiliation: "School of Artificial Intelligence, Beihang University"
+    research: "Artificial Intelligence Security"
+    email: "yuhuawang@buaa.edu.cn"
+    supervisor: "Zhang Qinnan"
+    photo: "王玉画.jpg"
+    introduction: "Graduate student focusing on AI Security research."
+    order: 4
+
+  - name: "Yue Yue"
+    affiliation: "School of Computer Science, Beijing Jiaotong University"
+    research: "Artificial Intelligence"
+    email: "2575167085@qq.com"
+    photo: "岳跃.jpg"
+    introduction: "Specialized in multimodal retrieval"
+    order: 5
+
+  - name: "Duan Junkun"
+    affiliation: "Department of Computer Science, Beijing Jiaotong University"
+    research: "Artificial Intelligence"
+    email: "2452719653@qq.com"
+    photo: "段军坤.jpg"
+    introduction: "An optimistic and conscientious individual with demonstrated capability in integrating algorithmic theories with engineering practices. Proficient in implementing cutting-edge models and methodologies to address complex real-world scenarios."
+    order: 6
+
+# ==================
+# Undergraduate Students
+# ==================
+undergraduate_students:
+  - name: "Yang Zhuo"
+    affiliation: "School of Software, Beihang University"
+    research: "Blockchain Security"
+    email: "24373054@buaa.edu.cn"
+    supervisor: "Zhang Qinnan"
+    homepage: "https://yz.matrixlab.work/"
+    photo: "杨卓.jpg"
+    introduction: "Founder of KeEntropy Technology, currently pursuing a degree in Software Engineering at Beihang University. Specializes in Web3 security, smart contract development, and AI Agent applications. Possesses two years of full-stack development experience, with comprehensive capabilities in product implementation from architectural design to deployment and launch."
+    order: 1
+
+  - name: "Liu Zhanbo"
+    affiliation: "Beihang University"
+    research: "Blockchain Security"
+    email: "liuzhanbo@buaa.edu.cn"
+    supervisor: "Zhang Xiao"
+    photo: "刘展博.jpg"
+    introduction: "Liu Zhanbo is an undergraduate student majoring in Information Security at the School of Cyberspace Science and Technology, Beihang University. His current research focuses on the identification of illicit transactions in blockchain and the construction of malicious account profiles."
+    order: 2
+
+  - name: "Lin Daozhou"
+    affiliation: "School of Mathematical Sciences, Beihang University"
+    research: "Stablecoins"
+    email: "23377188@buaa.edu.cn"
+    supervisor: "Zhang Qinnan"
+    photo: "林道洲.jpg"
+    introduction: "Majoring in mathematics with a solid foundation in mathematical principles."
+    order: 3
+
+  - name: "Deng Hanyue"
+    affiliation: "School of Mathematical Sciences, Beihang University"
+    research: "Stablecoin"
+    email: "23377142@buaa.edu.cn"
+    photo: "邓寒月.jpeg"
+    introduction: "Specializing in Information Security at the School of Mathematical Sciences, Beihang University."
+    order: 4
+
+  - name: "Irpoun"
+    affiliation: "School of Mathematical Sciences, Beihang University"
+    research: "Stablecoin Risk Control, Blockchain Security"
+    email: "Irpoun@163.com"
+    photo: "伊尔潘.jpeg"
+    introduction: "Specializes in stablecoin stabilization mechanisms and on-chain security governance."
+    order: 5
+
+# ==================
+# Alumni
+# ==================
+alumni: []

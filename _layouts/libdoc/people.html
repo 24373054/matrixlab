@@ -8,65 +8,152 @@ layout: libdoc/default
             <p class="u-fs-lg u-m-none u-lh-base" u-fs-md="sm">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</p>
             
             <!-- People Category Toggle Buttons -->
-            <div class="c-grid u-mb-sm">
+            <div class="c-grid u-mb-sm u-mt-md">
                 <button class="c-btn m-tab u-fs-sm u-mr-sm active" data-tab="faculty">Faculty</button>
-                <button class="c-btn m-tab u-fs-sm u-mr-sm" data-tab="students">Students</button>
+                <button class="c-btn m-tab u-fs-sm u-mr-sm" data-tab="phd">PhD Students</button>
+                <button class="c-btn m-tab u-fs-sm u-mr-sm" data-tab="master">Master's Students</button>
+                <button class="c-btn m-tab u-fs-sm u-mr-sm" data-tab="undergraduate">Undergraduates</button>
                 <button class="c-btn m-tab u-fs-sm" data-tab="alumni">Alumni</button>
             </div>
         </header>
         <div id="libdoc-content" class="u-p-lg u-p-sm--sm">
+            
             <!-- Faculty Content -->
             <div id="faculty" class="tab-content active">
                 <h2>Faculty</h2>
-                
-                <div class="faculty-member u-mb-lg">
-                    <h3>Qinnan Zhang, Assistant Researcher</h3>
-                    <p><strong>Email:</strong> zhangqn@buaa.edu.cn</p>
-                    <p><strong>Address:</strong> 12th Floor, Baiyan Building, No. 238 Xueyuan Road, Haidian District, Beijing</p>
-                    <p><strong>Personal Homepage:</strong> <a href="https://scholar.google.com/citations?user=A91BgKwAAAAJ&hl=zh-CN" target="_blank">Google Scholar Profile</a></p>
+                <div class="people-grid">
+                    {% for person in site.data.people.faculty %}
+                    <div class="person-card">
+                        <div class="person-photo">
+                            <img src="{{ '/assets/people/' | append: person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+                        </div>
+                        <div class="person-info">
+                            <h3>{{ person.name }}</h3>
+                            <p class="title">{{ person.title }}</p>
+                            <p class="affiliation">{{ person.affiliation }}</p>
+                            <p class="research"><strong>Research:</strong> {{ person.research }}</p>
+                            <p class="email"><strong>Email:</strong> <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+                            {% if person.homepage %}
+                            <p class="homepage"><strong>Homepage:</strong> <a href="{{ person.homepage }}" target="_blank">Link</a></p>
+                            {% endif %}
+                            <p class="introduction">{{ person.introduction }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
 
-            <!-- Students Content -->
-            <div id="students" class="tab-content">
-                <h2>Students</h2>
-                
-                <div class="student-member u-mb-lg">
-                    <h3>PhD Students</h3>
-                    <ul>
-                        <!-- Reserved for future members -->
-                    </ul>
+            <!-- PhD Students Content -->
+            <div id="phd" class="tab-content">
+                <h2>PhD Students</h2>
+                <div class="people-grid">
+                    {% for person in site.data.people.phd_students %}
+                    <div class="person-card">
+                        <div class="person-photo">
+                            <img src="{{ '/assets/people/' | append: person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+                        </div>
+                        <div class="person-info">
+                            <h3>{{ person.name }}</h3>
+                            <p class="affiliation">{{ person.affiliation }}</p>
+                            <p class="research"><strong>Research:</strong> {{ person.research }}</p>
+                            {% if person.supervisor %}
+                            <p class="supervisor"><strong>Supervisor:</strong> {{ person.supervisor }}</p>
+                            {% endif %}
+                            <p class="email"><strong>Email:</strong> <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+                            {% if person.homepage %}
+                            <p class="homepage"><strong>Homepage:</strong> <a href="{{ person.homepage }}" target="_blank">Link</a></p>
+                            {% endif %}
+                            <p class="introduction">{{ person.introduction }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
+            </div>
 
-                <div class="student-member u-mb-lg">
-                    <h3>Master's Students</h3>
-                    <ul>
-                        <!-- Reserved for future members -->
-                    </ul>
+            <!-- Master Students Content -->
+            <div id="master" class="tab-content">
+                <h2>Master's Students</h2>
+                <div class="people-grid">
+                    {% for person in site.data.people.master_students %}
+                    <div class="person-card">
+                        <div class="person-photo">
+                            <img src="{{ '/assets/people/' | append: person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+                        </div>
+                        <div class="person-info">
+                            <h3>{{ person.name }}</h3>
+                            <p class="affiliation">{{ person.affiliation }}</p>
+                            <p class="research"><strong>Research:</strong> {{ person.research }}</p>
+                            {% if person.supervisor %}
+                            <p class="supervisor"><strong>Supervisor:</strong> {{ person.supervisor }}</p>
+                            {% endif %}
+                            <p class="email"><strong>Email:</strong> <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+                            {% if person.homepage %}
+                            <p class="homepage"><strong>Homepage:</strong> <a href="{{ person.homepage }}" target="_blank">Link</a></p>
+                            {% endif %}
+                            <p class="introduction">{{ person.introduction }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
+            </div>
 
-                <div class="student-member u-mb-lg">
-                    <h3>Undergraduate Students</h3>
-                    <ul>
-                        <li><strong>Yang Zhuo</strong> - Stablecoins/Quantitative Trading - <a href="https://24373054.github.io" target="_blank">Personal Homepage</a></li>
-                    </ul>
+            <!-- Undergraduate Students Content -->
+            <div id="undergraduate" class="tab-content">
+                <h2>Undergraduate Students</h2>
+                <div class="people-grid">
+                    {% for person in site.data.people.undergraduate_students %}
+                    <div class="person-card">
+                        <div class="person-photo">
+                            <img src="{{ '/assets/people/' | append: person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+                        </div>
+                        <div class="person-info">
+                            <h3>{{ person.name }}</h3>
+                            <p class="affiliation">{{ person.affiliation }}</p>
+                            <p class="research"><strong>Research:</strong> {{ person.research }}</p>
+                            {% if person.supervisor %}
+                            <p class="supervisor"><strong>Supervisor:</strong> {{ person.supervisor }}</p>
+                            {% endif %}
+                            <p class="email"><strong>Email:</strong> <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+                            {% if person.homepage %}
+                            <p class="homepage"><strong>Homepage:</strong> <a href="{{ person.homepage }}" target="_blank">Link</a></p>
+                            {% endif %}
+                            <p class="introduction">{{ person.introduction }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
 
             <!-- Alumni Content -->
             <div id="alumni" class="tab-content">
                 <h2>Alumni</h2>
-                
-                <div class="alumni-member u-mb-lg">
-                    <!-- Reserved for future alumni -->
+                {% if site.data.people.alumni.size > 0 %}
+                <div class="people-grid">
+                    {% for person in site.data.people.alumni %}
+                    <div class="person-card">
+                        <div class="person-photo">
+                            <img src="{{ '/assets/people/' | append: person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+                        </div>
+                        <div class="person-info">
+                            <h3>{{ person.name }}</h3>
+                            <p class="affiliation">{{ person.current_position }}</p>
+                            <p class="introduction">{{ person.introduction }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
+                {% else %}
+                <p class="no-data">No alumni information yet.</p>
+                {% endif %}
             </div>
+
         </div>
     </div>
     <div id="libdoc-toc-container" class="m-fw-mini c-position m-top-right m-anchor-top-left u-bc-primary-edge u-z-10" u-fixed="sm" u-none="sm"></div>
 </main>
 
 <style>
+/* Tab Content */
 .tab-content {
     display: none;
 }
@@ -75,40 +162,209 @@ layout: libdoc/default
     display: block;
 }
 
-/* Reduce space above headings */
 .tab-content h2 {
     margin-top: 0.5em !important;
-    margin-bottom: 1em !important;
+    margin-bottom: 1.5em !important;
+    color: #123456;
+    border-bottom: 2px solid #123456;
+    padding-bottom: 0.5em;
 }
 
-.faculty-member, .student-member, .alumni-member {
-    border-left: 4px solid #007bff;
-    padding-left: 16px;
-    margin-bottom: 24px;
+/* Tab Buttons */
+.c-btn.m-tab {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.faculty-member h3, .student-member h3, .alumni-member h3 {
+.c-btn.m-tab:hover {
+    background: #e0e0e0;
+}
+
+.c-btn.m-tab.active {
+    background: #123456;
+    color: white;
+    border-color: #123456;
+}
+
+/* People Grid */
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+/* Person Card */
+.person-card {
+    display: flex;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.person-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+/* Person Photo */
+.person-photo {
+    flex-shrink: 0;
+    width: 140px;
+    height: 180px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.person-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.person-card:hover .person-photo img {
+    transform: scale(1.05);
+}
+
+/* Person Info */
+.person-info {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.person-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
     color: #333;
-    margin-bottom: 8px;
 }
 
-.faculty-member p, .student-member ul, .alumni-member ul {
-    margin: 8px 0;
+.person-info p {
+    margin: 4px 0;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.person-info .title {
+    color: #123456;
+    font-weight: 500;
+}
+
+.person-info .affiliation {
+    color: #666;
+    font-style: italic;
+}
+
+.person-info .research {
+    color: #444;
+}
+
+.person-info .supervisor {
     color: #666;
 }
 
-.student-member ul, .alumni-member ul {
-    padding-left: 20px;
+.person-info .email a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.student-member li, .alumni-member li {
-    margin-bottom: 4px;
+.person-info .email a:hover {
+    text-decoration: underline;
+}
+
+.person-info .homepage a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.person-info .homepage a:hover {
+    text-decoration: underline;
+}
+
+.person-info .introduction {
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: 0.85em;
+    color: #666;
+    border-top: 1px dashed #eee;
+}
+
+/* No Data */
+.no-data {
+    text-align: center;
+    color: #999;
+    padding: 40px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .person-card {
+        flex-direction: column;
+    }
+    
+    .person-photo {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .c-btn.m-tab {
+        padding: 6px 12px;
+        font-size: 0.85em;
+        margin-bottom: 8px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .person-card {
+        background: #2a2a2a;
+        border-color: #444;
+    }
+    
+    .person-info h3 {
+        color: #fff;
+    }
+    
+    .person-info p {
+        color: #ccc;
+    }
+    
+    .person-info .introduction {
+        border-top-color: #444;
+    }
+    
+    .c-btn.m-tab {
+        background: #333;
+        border-color: #555;
+        color: #fff;
+    }
+    
+    .c-btn.m-tab:hover {
+        background: #444;
+    }
+    
+    .c-btn.m-tab.active {
+        background: #123456;
+    }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // People category switching functionality
     const tabButtons = document.querySelectorAll('.c-btn[data-tab]');
     const tabContents = document.querySelectorAll('.tab-content');
     
@@ -116,16 +372,20 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const tabId = this.getAttribute('data-tab');
             
-            // Remove active class from all buttons
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            // Hide all content
             tabContents.forEach(content => content.classList.remove('active'));
             
-            // Activate current button
             this.classList.add('active');
-            // Show corresponding content
             document.getElementById(tabId).classList.add('active');
         });
     });
+    
+    if (window.location.hash) {
+        const tabId = window.location.hash.substring(1);
+        const tabButton = document.querySelector(`.c-btn[data-tab="${tabId}"]`);
+        if (tabButton) {
+            tabButton.click();
+        }
+    }
 });
 </script>
