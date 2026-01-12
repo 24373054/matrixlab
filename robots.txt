@@ -1,5 +1,5 @@
 # Matrix Lab - Robots.txt
-# https://matrixlab.work
+# https://matrixlab.work / https://matrixlabs.cn
 
 User-agent: *
 Allow: /
@@ -7,9 +7,12 @@ Disallow: /admin-panel.html
 Disallow: /_site/
 Disallow: /.jekyll-cache/
 Disallow: /assets/libdoc/ajax/
+Disallow: /feed.xml
+Disallow: /sitemap.xml
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://matrixlab.work/sitemap.xml
+Sitemap: https://matrixlabs.cn/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
